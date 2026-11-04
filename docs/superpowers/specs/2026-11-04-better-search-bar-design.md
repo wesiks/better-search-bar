@@ -142,3 +142,4 @@ The executable supports headless CLI execution:
 - Framework: `net10.0`
 - Output: Single-file executable option (`dotnet publish -c Release -r win-x64 --self-contained true /p:PublishSingleFile=true /p:IncludeNativeLibrariesForSelfExtract=true`)
 - Git Integration: Repository initialized locally, committed, and synced to GitHub (`wesiks/better-search-bar`).
+
