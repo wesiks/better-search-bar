@@ -12,3 +12,4 @@ if ($LASTEXITCODE -eq 0) {
 } else {
     Write-Host "`n[✗] Ошибка при сборке. Проверьте наличие .NET 10 SDK." -ForegroundColor Red
 }
+
