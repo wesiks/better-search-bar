@@ -16,7 +16,7 @@ public static class ProcessHelper
     public static int RestartSearchHost()
     {
         int killed = 0;
-        string[] targetProcessNames = ["SearchHost", "SearchApp", "SearchUI"];
+        string[] targetProcessNames = ["SearchHost", "SearchApp", "SearchUI", "StartMenuExperienceHost"];
 
         foreach (var procName in targetProcessNames)
         {

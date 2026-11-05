@@ -14,6 +14,7 @@ public static class TweaksRegistry
         new CloudSearchTweak(),
         new TopAppsTweak(),
         new QuickSearchesTweak(),
+        new RecommendationsTweak(),
         new IndexingServiceTweak()
     ];
 
