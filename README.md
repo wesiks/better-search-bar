@@ -142,3 +142,4 @@ BetterSearchBar.exe --status
 ## 📄 Лицензия
 
 Распространяется под лицензией MIT. Подробнее см. в файле [LICENSE](LICENSE).
+

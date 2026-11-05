@@ -40,3 +40,4 @@ public interface ITweak
     /// </summary>
     void Revert();
 }
+
