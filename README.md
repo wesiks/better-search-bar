@@ -6,6 +6,7 @@
 [![Windows](https://img.shields.io/badge/Platform-Windows%2010%20%2F%2011-0078D6?logo=windows)](https://microsoft.com/windows)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![GitHub wesiks](https://img.shields.io/badge/Author-wesiks-blue?logo=github)](https://github.com/wesiks)
+[![Telegram @wesiks](https://img.shields.io/badge/Telegram-%40wesiks-2CA5E0?logo=telegram)](https://t.me/wesiks)
 
 ---
 

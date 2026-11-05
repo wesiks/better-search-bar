@@ -69,7 +69,8 @@ public static class Program
 
     private static void PrintHelp()
     {
-        AnsiConsole.MarkupLine("[bold dodgerblue1]BetterSearchBar — CLI утилита для очистки поиска Windows[/]\n");
+        AnsiConsole.MarkupLine("[bold dodgerblue1]BetterSearchBar — CLI утилита для очистки поиска Windows[/]");
+        AnsiConsole.MarkupLine("[grey]Автор:[/] [bold dodgerblue1]wesiks[/] [grey]•[/] [grey]Telegram:[/] [bold dodgerblue1]@wesiks[/] [grey](https://t.me/wesiks)[/]\n");
         AnsiConsole.MarkupLine("[bold]Использование:[/] [white]BetterSearchBar [[опции]][/]\n");
         AnsiConsole.MarkupLine("[bold]Опции без интерактивного режима:[/] ");
         AnsiConsole.MarkupLine("  [white]-c, --clean-all[/]        Отключить всю рекламу, промо-игры, тренды Bing и облачный поиск");

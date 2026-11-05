@@ -92,6 +92,7 @@ public static class ConsoleUI
             ? "[bold green] Администратор [/]"
             : "[bold yellow] Обычный пользователь (для полного отключения системных политик рекомендуется запуск от Администратора) [/]";
 
+        AnsiConsole.MarkupLine($"[grey]Разработчик:[/] [bold dodgerblue1]wesiks[/] [grey]•[/] [grey]Telegram:[/] [bold dodgerblue1]@wesiks[/] [grey](https://t.me/wesiks)[/]");
         AnsiConsole.MarkupLine($"[grey]Режим прав:[/] {adminBadge}");
         AnsiConsole.MarkupLine($"[grey]Система:[/] [white]{Environment.OSVersion}[/]\n");
     }
