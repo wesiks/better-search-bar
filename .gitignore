@@ -4,6 +4,7 @@
 [Rr]elease/
 [Rr]eleasePublic/
 publish/
+dist/
 x64/
 x86/
 [Aa][Rr][Mm]/

@@ -1,0 +1,52 @@
+name: Build and Release
+
+on:
+  push:
+    branches: [ "main" ]
+    tags: [ "v*" ]
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore src/BetterSearchBar/BetterSearchBar.csproj
+
+    - name: Build project
+      run: dotnet build src/BetterSearchBar/BetterSearchBar.csproj --configuration Release --no-restore
+
+    - name: Publish Single-File Executable (win-x64)
+      run: >
+        dotnet publish src/BetterSearchBar/BetterSearchBar.csproj
+        -c Release
+        -r win-x64
+        --self-contained true
+        /p:PublishSingleFile=true
+        /p:IncludeNativeLibrariesForSelfExtract=true
+        -o ./dist
+
+    - name: Upload Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: BetterSearchBar-win-x64
+        path: ./dist/BetterSearchBar.exe
+
+    - name: Create Release
+      if: startsWith(github.ref, 'refs/tags/v')
+      uses: softprops/action-gh-release@v2
+      with:
+        files: ./dist/BetterSearchBar.exe
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
