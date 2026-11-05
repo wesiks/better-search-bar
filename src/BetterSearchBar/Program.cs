@@ -23,7 +23,6 @@ public static class Program
             return HandleCliArguments(args);
         }
 
-        // Run interactive menu
         ConsoleUI.Run();
         return 0;
     }

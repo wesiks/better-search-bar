@@ -240,7 +240,6 @@ public static class ConsoleUI
         }
         catch
         {
-            // Ignore if key cannot be read
         }
     }
 

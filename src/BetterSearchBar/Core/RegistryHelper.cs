@@ -52,7 +52,7 @@ public static class RegistryHelper
         {
             using var baseKey = RegistryKey.OpenBaseKey(hive, RegistryView.Default);
             using var subKey = baseKey.OpenSubKey(subKeyPath, writable: true);
-            if (subKey == null) return true; // Already gone
+            if (subKey == null) return true;
 
             if (subKey.GetValue(valueName) != null)
             {
@@ -70,4 +70,3 @@ public static class RegistryHelper
         }
     }
 }
-

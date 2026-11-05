@@ -33,7 +33,6 @@ public class SearchHighlightsTweak : ITweak
         }
         catch (UnauthorizedAccessException)
         {
-            // Non-admin fallback handled gracefully
         }
     }
 
@@ -47,8 +46,6 @@ public class SearchHighlightsTweak : ITweak
         }
         catch (UnauthorizedAccessException)
         {
-            // Non-admin fallback handled gracefully
         }
     }
 }
-

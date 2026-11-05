@@ -21,7 +21,6 @@ public class AdsTweak : ITweak
         var sub338388 = RegistryHelper.GetDword(RegistryHive.CurrentUser, ContentDeliveryKey, "SubscribedContent-338388Enabled");
         var sub338389 = RegistryHelper.GetDword(RegistryHive.CurrentUser, ContentDeliveryKey, "SubscribedContent-338389Enabled");
 
-        // Consider applied if main promo suggestions are disabled
         return suggestions == 0 && (sub338388 == 0 || sub338389 == 0);
     }
 
@@ -38,7 +37,6 @@ public class AdsTweak : ITweak
         }
         catch (UnauthorizedAccessException)
         {
-            // Allowed to succeed even if non-admin for HKLM policy
         }
     }
 
@@ -55,8 +53,6 @@ public class AdsTweak : ITweak
         }
         catch (UnauthorizedAccessException)
         {
-            // Allowed to fail if non-admin
         }
     }
 }
-

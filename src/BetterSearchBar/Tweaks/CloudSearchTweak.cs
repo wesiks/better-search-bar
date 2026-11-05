@@ -35,7 +35,6 @@ public class CloudSearchTweak : ITweak
         }
         catch (UnauthorizedAccessException)
         {
-            // Allowed for non-elevated user
         }
     }
 
@@ -50,8 +49,6 @@ public class CloudSearchTweak : ITweak
         }
         catch (UnauthorizedAccessException)
         {
-            // Allowed for non-elevated user
         }
     }
 }
-
