@@ -11,7 +11,10 @@ public static class TweaksRegistry
         new AdsTweak(),
         new SearchHighlightsTweak(),
         new BingSearchTweak(),
-        new CloudSearchTweak()
+        new CloudSearchTweak(),
+        new TopAppsTweak(),
+        new QuickSearchesTweak(),
+        new IndexingServiceTweak()
     ];
 
     public static IReadOnlyList<ITweak> All => _tweaks;
@@ -53,4 +56,3 @@ public static class TweaksRegistry
         }
     }
 }
-

@@ -69,4 +69,28 @@ public static class RegistryHelper
             return false;
         }
     }
+
+    public static bool ClearSubKeyValues(RegistryHive hive, string subKeyPath)
+    {
+        try
+        {
+            using var baseKey = RegistryKey.OpenBaseKey(hive, RegistryView.Default);
+            using var subKey = baseKey.OpenSubKey(subKeyPath, writable: true);
+            if (subKey == null) return true;
+
+            foreach (var valName in subKey.GetValueNames())
+            {
+                subKey.DeleteValue(valName, throwOnMissingValue: false);
+            }
+            return true;
+        }
+        catch (UnauthorizedAccessException)
+        {
+            throw;
+        }
+        catch
+        {
+            return false;
+        }
+    }
 }
